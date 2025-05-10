@@ -21,4 +21,8 @@ export class AppComponent {
       this.history.unshift(`🟢 Counter is incremented to ${this.counter}`);
     }
   }
+
+  clearHistory(){
+    this.history=[]
+  }
 }

@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-xl-6 col-lg-6 col-md-6 col-md-12 col-12 p-2">
         <h1 class="d-flex justify-content-center">Counter</h1>
-        <hr>
+        <hr />
         <div class="counter-cont p-2">
           <div
             class="counter-container d-flex justify-content-center align-items-center gap-2 flex-column"
@@ -33,7 +33,15 @@
               >
                 Increment
               </button>
+              <button
+                type="button"
+                class="btn btn-info"
+                (click)="clearHistory()"
+              >
+                Clear History
+              </button>
             </div>
+           
           </div>
         </div>
       </div>
@@ -41,8 +49,10 @@
         class="col-xl-6 col-lg-6 col-md-6 col-md-12 col-12 history-container p-2"
       >
         <h1 class="d-flex justify-content-center">History</h1>
-         <hr>
-        <span class="text-danger d-flex justify-content-center" *ngIf="history.length === 0"
+        <hr />
+        <span
+          class="text-danger d-flex justify-content-center"
+          *ngIf="history.length === 0"
           >No History Available...!</span
         >
         <ul class="list-group">
