@@ -15,10 +15,10 @@ export class AppComponent {
       this.history.unshift(`🔴Counter is incremented to ${this.counter}`);
     } else if (type === 'Reset') {
       this.counter = 0;
-      this.history.unshift(`🟡Counter is incremented to ${this.counter}`);
+      this.history.unshift(`🟡Counter value is been reset to ${this.counter}`);
     } else if (type === 'Increment') {
       this.counter >= 0 ? (this.counter += 1) : this.counter;
-      this.history.unshift(`🟢 Counter is incremented to ${this.counter}`);
+      this.history.unshift(`🟢 Counter value is decremented by 1 current value is ${this.counter}`);
     }
   }
 
