@@ -1,0 +1,56 @@
+<div class="component-wrapper p-5">
+  <div class="card counter-wrapper d-flex gap-2">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-md-12 col-12 p-2">
+        <h1 class="d-flex justify-content-center">Counter</h1>
+        <hr>
+        <div class="counter-cont p-2">
+          <div
+            class="counter-container d-flex justify-content-center align-items-center gap-2 flex-column"
+          >
+            <div class="counter-value">
+              <h1>{{ counter }}</h1>
+            </div>
+            <div class="action-btns d-flex gap-2">
+              <button
+                type="button"
+                class="btn btn-danger"
+                (click)="setCounter('Decrement')"
+              >
+                Decrement
+              </button>
+              <button
+                type="button"
+                class="btn btn-warning"
+                (click)="setCounter('Reset')"
+              >
+                Reset
+              </button>
+              <button
+                type="button"
+                class="btn btn-success"
+                (click)="setCounter('Increment')"
+              >
+                Increment
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-xl-6 col-lg-6 col-md-6 col-md-12 col-12 history-container p-2"
+      >
+        <h1 class="d-flex justify-content-center">History</h1>
+         <hr>
+        <span class="text-danger d-flex justify-content-center" *ngIf="history.length === 0"
+          >No History Available...!</span
+        >
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let data of history">
+            {{ data }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
